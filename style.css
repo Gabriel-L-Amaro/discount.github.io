@@ -1,0 +1,156 @@
+
+    body {
+        background-color: white;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    .discounts {
+        display: flex;
+        flex-direction: row;
+        margin-top: -5vh;
+        margin-left: 6vh;
+    }
+
+    .title {
+        color: black;
+        font-size: 10vh;
+        border-bottom: solid black 0.5vh;
+        border-bottom-left-radius: 3vh;
+        margin-left: 3vh;
+        font-family: 'Mr Dafoe', cursive;
+    }
+
+    .basic {
+        background-color: green;
+        font-size: 3.5vh;
+        padding-left: 1vh;
+        margin: 1vh;
+        border: solid black 1vh;
+        border-radius: 3vh;
+    }
+
+    #basicButton {
+        font-size: 3vh;
+        color: white;
+        background-color: black;
+        border: solid black 0.25vh;
+        border-radius: 10vh;
+        height: 7vh;
+        width: 20vh;
+        margin-bottom: 2vh;
+    }
+
+    #basicButton:hover {
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        transition: 0.5s;
+    }
+
+    .professional {
+        background-color: red;
+        font-size: 3.5vh;
+        padding-left: 1vh;
+        margin: 1vh;
+        border: solid black 1vh;
+        border-radius: 3vh;
+    }
+
+    #professionalButton {
+        font-size: 3vh;
+        color: white;
+        background-color: black;
+        border: solid black 0.25vh;
+        border-radius: 10vh;
+        height: 7vh;
+        width: 20vh;
+        margin-bottom: 2vh;
+    }
+
+    #professionalButton:hover {
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        transition: 0.5s;
+    }
+
+    .ultimate {
+        background-color: yellow;
+        font-size: 3.5vh;
+        padding-left: 1vh;
+        margin: 1vh;
+        border: solid black 1vh;
+        border-radius: 3vh;
+    }
+
+    #ultimateButton {
+        font-size: 3vh;
+        color: white;
+        background-color: black;
+        border: solid black 0.25vh;
+        border-radius: 10vh;
+        height: 7vh;
+        width: 20vh;
+        margin-bottom: 2vh;
+    }
+
+    #ultimateButton:hover {
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        transition: 0.5s;
+    }
+
+    .list {
+        font-size: 2.3vh;
+        padding-left: 1vh;
+        margin: 1vh
+    }
+
+    .multiButtons {
+        display: flex;
+        margin-left: 6vh;
+        flex-direction: row;
+    }
+
+    .months {
+        margin-top: 5vh;
+        font-size: 5vh;
+    }
+
+    #monthsLabel {
+        border-bottom: solid black 0.5vh;
+        border-bottom-left-radius: 3vh;
+    }
+
+    #customMonths {
+        height: 3vh;
+        width: 4.25vh;
+        color: black;
+        background-color: white;
+        border: solid black 0.25vh;
+        border-radius: 10vh;
+        font-size: 2vh;
+    }
+
+    .calc {
+        margin-top: 5vh;
+        margin-left: 5vh;
+    }
+
+    #calcButton {
+        font-size: 3vh;
+        color: black;
+        background-color: white;
+        border: solid black 0.25vh;
+        border-radius: 10vh;
+        height: 7vh;
+        width: 20vh;
+    }
+
+    #calcButton:hover {
+        cursor: pointer;
+        color: white;
+        background-color: black;
+        transition: 0.5s;   
+    }

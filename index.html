@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta http-equiv = "X-UA-Compatible" content = "IE=edge">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mr+Dafoe&family=Outfit:wght@300&display=swap" rel="stylesheet">
+    <title>Discount Plan</title>
+</head>
+<style>
+    
+    body {
+        background-color: white;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    .discounts {
+        display: flex;
+        flex-direction: row;
+        margin-top: -5vh;
+        margin-left: 6vh;
+    }
+
+    .title {
+        color: black;
+        font-size: 10vh;
+        border-bottom: solid black 0.5vh;
+        border-bottom-left-radius: 3vh;
+        margin-left: 3vh;
+        font-family: 'Mr Dafoe', cursive;
+    }
+
+    .basic {
+        background-color: green;
+        font-size: 3.5vh;
+        padding-left: 1vh;
+        margin: 1vh;
+        border: solid black 1vh;
+        border-radius: 3vh;
+    }
+
+    #basicButton {
+        font-size: 3vh;
+        color: white;
+        background-color: black;
+        border: solid black 0.25vh;
+        border-radius: 10vh;
+        height: 7vh;
+        width: 20vh;
+        margin-bottom: 2vh;
+    }
+
+    #basicButton:hover {
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        transition: 0.5s;
+    }
+
+    .professional {
+        background-color: red;
+        font-size: 3.5vh;
+        padding-left: 1vh;
+        margin: 1vh;
+        border: solid black 1vh;
+        border-radius: 3vh;
+    }
+
+    #professionalButton {
+        font-size: 3vh;
+        color: white;
+        background-color: black;
+        border: solid black 0.25vh;
+        border-radius: 10vh;
+        height: 7vh;
+        width: 20vh;
+        margin-bottom: 2vh;
+    }
+
+    #professionalButton:hover {
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        transition: 0.5s;
+    }
+
+    .ultimate {
+        background-color: yellow;
+        font-size: 3.5vh;
+        padding-left: 1vh;
+        margin: 1vh;
+        border: solid black 1vh;
+        border-radius: 3vh;
+    }
+
+    #ultimateButton {
+        font-size: 3vh;
+        color: white;
+        background-color: black;
+        border: solid black 0.25vh;
+        border-radius: 10vh;
+        height: 7vh;
+        width: 20vh;
+        margin-bottom: 2vh;
+    }
+
+    #ultimateButton:hover {
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        transition: 0.5s;
+    }
+
+    .list {
+        font-size: 2.3vh;
+        padding-left: 1vh;
+        margin: 1vh
+    }
+
+    .multiButtons {
+        display: flex;
+        margin-left: 6vh;
+        flex-direction: row;
+    }
+
+    .months {
+        margin-top: 5vh;
+        font-size: 5vh;
+    }
+
+    #monthsLabel {
+        border-bottom: solid black 0.5vh;
+        border-bottom-left-radius: 3vh;
+    }
+
+    #customMonths {
+        height: 3vh;
+        width: 4.25vh;
+        color: black;
+        background-color: white;
+        border: solid black 0.25vh;
+        border-radius: 10vh;
+        font-size: 2vh;
+    }
+
+    .calc {
+        margin-top: 5vh;
+        margin-left: 5vh;
+    }
+
+    #calcButton {
+        font-size: 3vh;
+        color: black;
+        background-color: white;
+        border: solid black 0.25vh;
+        border-radius: 10vh;
+        height: 7vh;
+        width: 20vh;
+    }
+
+    #calcButton:hover {
+        cursor: pointer;
+        color: white;
+        background-color: black;
+        transition: 0.5s;   
+    }
+
+</style>
+<script>
+
+        var plan1 = {
+            name: "Basic",
+            price: 3.99,
+            space: 100, 
+            transfer: 1000,
+            pages: 10,
+            discountMonths: [0, 7]
+        };
+
+        var plan2 = {
+            name: "Professional",
+            price: 5.99,
+            space: 500,
+            transfer: 5000, 
+            pages: 50, 
+            discountMonths: [0, 7, 11]
+        };
+
+        var plan3 = {
+            name: "Ultimate",
+            price: 9.99,
+            space: 2000,
+            transfer: 20000,
+            pages: 500,
+            discountMonths:[0, 7]
+        };
+        
+        function calcAnnual(){
+            var bestPrice = plan1.price;
+            console.log("Price" + bestPrice);
+            var currDate = new Date();
+            console.log("Current Date " + currDate);
+            var thisMo = currDate.getMonth();
+            console.log("This Month " + thisMo);
+            for(var i = 0; i < plan1.discountMonths.length; i++){
+                if(plan1.discountMonths[i] === thisMo){
+                    bestPrice = plan1.price * .8;
+                    break;
+                }
+                console.log("Best Price " + bestPrice);
+            }
+            return bestPrice * 12;
+        }
+        var annualPrice = calcAnnual();
+        alert("Annual Price " + annualPrice);
+
+</script>
+<body>
+
+
+    <div class = "title">Choose Monthly Plan</div>
+
+<br/>
+<br/>
+
+    <div class = "discounts">
+
+        <div class = "basic">Basic:
+            <br/>
+            <br/>
+                <li class = "list"> Price: $3.99 </li>
+            <br/>
+                <li class = "list"> Space: 100 GB </li>
+            <br/>
+                <li class = "list"> Transfer: 1,000 GB </li>
+            <br/>
+                <li class = "list"> Pages: 10 </li>
+            <br/>
+                <li class = "list"> Discount Months: January and June</li>
+            <br/>
+
+            <input type = "button" id = "basicButton" name = "buttons" value = "Choose Plan">
+        </div>
+
+        <div class = "professional">Professional:
+            <br/>
+            <br/>
+                <li class = "list"> Price: $5.99 </li>
+            <br/>
+                <li class = "list"> Space: 500 GB </li>
+            <br/>
+                <li class = "list"> Transfer: 5,000 GB </li>
+            <br/>
+                <li class = "list"> Pages: 50 </li>
+            <br/>
+                <li class = "list"> Discount Months: January, June, & October </li>
+            <br/>
+
+            <input type = "button" id = "professionalButton" name = "buttons" value = "Choose Plan">
+        </div>
+
+        <div class = "ultimate">Ultimate:
+            <br/>
+            <br/>
+                <li class = "list"> Price: $9.99 </li>
+            <br/>
+                <li class = "list"> Space: 2,000 GB </li>
+            <br/>
+                <li class = "list"> Transfer: 20,000 GB </li>
+            <br/>
+                <li class = "list"> Pages: 500 </li>
+            <br/>
+                <li class = "list"> Discount Months: January and June </li>
+            <br/>
+
+            <input type = "button" id = "ultimateButton" name = "buttons" value = "Choose Plan">
+        </div>
+        
+    </div>
+
+    <div class = "multiButtons">
+
+        <div class = "months">
+            <label id = "monthsLabel" for = "customMonths">Select Months:</label>
+            <input type = "number" id = "customMonths" name = "custom" max = "12" min = "1">
+        </div>
+
+        <div class = "calc">
+            <input type = "button" id = "calcButton" name = "calc" value = "Calculate">
+        </div>
+
+    </div>
+
+</body>
+</html>
